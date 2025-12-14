@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+.card-container {
+    max-width: 480px;
+    background: white;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #24497a;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6e3;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #4b8bda;
+    outline: none;
+    box-shadow: 0 0 4px rgba(75,139,218,0.4);
+}
+
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 12px;
+    font-weight: 400;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #2d72d9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #215bb2;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    height: 14px;
+}

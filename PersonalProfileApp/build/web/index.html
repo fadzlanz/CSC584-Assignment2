@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/validation.js"></script>
+    <style>
+        body {
+            font-family: "Roboto", Arial, sans-serif;
+            background: #f2f6fc;
+            padding: 40px;
+        }
+        .container {
+            width: 450px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 { text-align: center; }
+
+        .subtitle {
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        label {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            gap: 8px;
+        }
+
+        .required {
+            color: red;
+            font-size: 16px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0,123,255,0.4);
+        }
+
+        textarea { min-height: 80px; }
+        .error { color: red; font-size: 13px; }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover { background: #0056b3; }
+
+        label i {
+            color: #007bff;
+            min-width: 20px; 
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Profile Registration</h1>
+        <p class="subtitle">Please fill all the details</p>
+
+        <form action="ProfileServlet" method="post" onsubmit="return validateForm();">
+
+            <label><i class="fa-solid fa-user"></i> Full Name: <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+            <span class="error" id="nameError"></span>
+
+            <label><i class="fa-solid fa-id-card"></i> Student ID: <span class="required">*</span></label>
+            <input type="text" id="studentId" name="studentId" placeholder="e.g., S1234567" required>
+            <span class="error" id="idError"></span>
+
+            <label><i class="fa-solid fa-graduation-cap"></i> Program: <span class="required">*</span></label>
+            <input type="text" id="program" name="program" placeholder="e.g., Computer Science" required>
+            <span class="error" id="programError"></span>
+
+            <label><i class="fa-solid fa-envelope"></i> Email: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="e.g., johndoe@example.com" required>
+            <span class="error" id="emailError"></span>
+
+            <label><i class="fa-solid fa-heart"></i> Hobbies: <span class="required">*</span></label>
+            <input type="text" id="hobbies" name="hobbies" placeholder="e.g., Reading, Football" required>
+            <span class="error" id="hobbiesError"></span>
+
+            <label><i class="fa-solid fa-comment"></i> Self Introduction: <span class="required">*</span></label>
+            <textarea id="intro" name="intro" placeholder="Write a short introduction about yourself..." required></textarea>
+            <span class="error" id="introError"></span>
+
+            <button type="submit">Submit Profile</button>
+            <p style="text-align:center; margin-top:15px; font-size:12px; color:#777;">
+                Form Design By <b>Muhammad Fadzlan</b><br>
+                Assignment 1 • CSC584 Enterprise Programming
+            </p>
+        </form>
+    </div>
+</body>
+</html>
